@@ -1,0 +1,46 @@
+"neutral_items"
+{
+	"1"
+	{
+		"drop_rates"
+		{
+			"00:01"
+			{
+				"0" "20"
+				"1" "20"
+				"2" "20"
+				"3" "20"
+				"4" "20"
+				"5" "20"
+				"6" "20"
+				"7" "20"
+				"8" "20"
+				"9" "20"
+				"10" "20"
+				"11" "20"
+			}
+		}
+
+		"items"
+		{
+			"item_force_boots"				  "1"
+			"item_desolator_2"				  "1"
+			"item_seer_stone"				  "1"
+			"item_mirror_shield"			  	  "1"
+			"item_apex"					  "1"
+			//"item_ballista"					  "1"
+			"item_demonicon"				  "1"
+			"item_fallen_sky"		  	  "1"
+			"item_force_field"				  "1"
+			"item_pirate_hat"				  "1"
+			"item_ex_machina"				  "1"
+			"item_giants_ring"				  "1"
+			//"item_vengeances_shadow"				  "1"
+			"item_book_of_shadows"			  "1"
+			//"item_manacles_of_power"		"1"
+			//"item_bottomless_chalice"		"1"
+			//"item_wand_of_sanctitude"		"1"
+			
+		}
+	}
+}

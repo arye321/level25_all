@@ -1,0 +1,18 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/game_info.vcss_c" />
+	</styles>
+	<Panel class="OverthrowGameInfo">
+				<Panel id="ThroneRow" class="InfoRow">
+			
+			<Image id="ThroneImage" src="s2r://panorama/images/custom_game/game_info/level25titlea_png.vtex" />
+		</Panel>
+
+		<Label id="ObjectiveHeader" class="Header" html="true" text="#level25_info_header" />
+		<Label id="BriefDescription" html="true" text="#level25_info" />
+		<Label id="HowToPlayHeader"  html="true" text="contact: level25mod@gmail.com" />
+
+	</Panel>
+</root>
+

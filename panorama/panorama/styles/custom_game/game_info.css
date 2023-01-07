@@ -1,0 +1,83 @@
+.OverthrowGameInfo
+{
+    width:100%;
+   flow-children: down;
+}
+ 
+Label
+{
+    font-size: 18px;
+    color: #999999;
+    vertical-align: top;
+}
+#ThroneRow
+{
+    margin-top: -40px;
+}
+
+#ThroneText
+{
+    margin-top: 60px;
+    text-align: right;
+}
+
+#ThroneImage
+{
+    margin-top: 50px;
+    margin-left: 115px;
+    width: 240px;
+    height: 100px;
+}
+#Title
+{
+    flow-children: right;
+}
+#TitleIMG
+{
+     margin-left: 110px;
+    width: 50%;
+    height: 33%;
+}
+
+
+
+#TitleName
+{
+    color: #cccccc;
+    font-size: 40px;
+   
+    margin-top: 16px;
+    
+    vertical-align: center;
+}
+
+#BriefDescription
+{
+    margin-left: 15px;
+    font-size: 17px;
+}
+
+#HowToPlayHeader
+{
+     margin-top: 50px;
+    font-size: 16px;
+    
+}
+
+.Header
+{
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 36px;
+    
+}
+
+#ObjectiveHeader
+{
+    margin-top: 18px;
+}
+
+
+
+
+

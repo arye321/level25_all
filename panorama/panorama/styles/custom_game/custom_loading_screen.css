@@ -1,0 +1,211 @@
+@define TotalLength: 30s;
+@define TimingFunc: linear;
+@define IterationCount: 1;
+
+
+
+.OverthrowLoadingRoot
+{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    overflow: clip;
+}
+
+
+
+
+
+
+
+#GameModeImage
+{
+	horizontal-align: center;
+	width: 200px;
+	height: 150px;
+
+	box-shadow: inset black 5px 5px 10px 10px;
+}
+
+#TitlePanel
+{
+	horizontal-align: left;
+	vertical-align: bottom;
+	margin-bottom: 150px;
+	margin-left: 100px;
+	flow-children: right;
+}
+
+
+#OverthrowTitle
+{
+	margin-bottom: -15px;
+	vertical-align: center;
+	text-transform: uppercase;
+	font-size: 95px;
+	color: #cccccc;
+	text-shadow: 12px 12px 12px #000000;
+
+}
+
+
+.SeqImg
+{
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+}
+
+.SeqBg
+{
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	background-size: 100% 100%;
+}
+
+#seq
+{
+    overflow: clip;
+	pre-transform-scale2d: 1.35, 1.35;
+}
+
+@keyframes 'x' {}
+
+#seq_bg
+{
+	animation-name: seq_bg_anim;
+	animation-duration: TotalLength;
+	animation-timing-function: TimingFunc;
+	animation-iteration-count: IterationCount;
+    margin-left: 0px;
+
+	margin-top: 150px;
+}
+
+@keyframes 'seq_bg_anim'
+{
+	0%
+	{
+	}
+
+	100%
+	{
+	}
+}
+
+
+#seq_beastmaster
+{
+	margin-left: 535px;
+	margin-top: 150px;
+	animation-name: seq_beastmaster_anim;
+	animation-duration: TotalLength;
+	animation-timing-function: TimingFunc;
+	animation-iteration-count: IterationCount;
+}
+
+@keyframes 'seq_beastmaster_anim'
+{
+	0%
+	{
+		transform: translateX( 40px ) translateY( -70px );
+	}
+
+	100%
+	{
+	}
+}
+
+
+#seq_juggernaut
+{
+	margin-left: 370px;
+	margin-top: 450px;
+	animation-name: seq_juggernaut_anim;
+	animation-duration: TotalLength;
+	animation-timing-function: TimingFunc;
+	animation-iteration-count: IterationCount;
+	pre-transform-scale2d: 0.90;
+}
+
+@keyframes 'seq_juggernaut_anim'
+{
+	0%
+	{
+		transform: translateX( 60px ) translateY( -20px );
+	}
+
+	100%
+	{
+	}
+}
+#aghanimInfo
+{flow-children: right;}
+
+#aghanimTip
+{
+	margin-left: 300px;
+	margin-top: 920px;
+
+	/*pre-transform-scale2d: 0.50;*/
+}
+/*#aghanim
+{
+	margin-left: 1px;
+	margin-top: 900px;
+
+	pre-transform-scale2d: 0.50;
+}*/
+#aghanimTip2
+{
+	margin-left: 1px;
+	margin-top: 920px;
+
+	/*pre-transform-scale2d: 0.50;*/
+}
+	#Developers
+	{
+	  margin-bottom: 70%;
+	  padding-top: 2px;
+	  padding-bottom: 2px;
+	  flow-children: down;
+	  background-color: #000000ac;
+	  horizontal-align: left;
+	  vertical-align: bottom;
+	  margin-left: 1px;
+
+	}
+	#Developers Label
+	{
+	  color: white;
+	  font-size: 10px;
+	  horizontal-align: center;
+	}
+
+.avatar
+{
+  width: 48px;
+  height: 48px;
+  background-color: black;
+  vertical-align: middle;
+  horizontal-align: center;
+}
+.avatar:hover
+{
+ width: 150px;
+  height: 150px;
+
+
+}
+.mynickname
+{
+  horizontal-align: center;
+  
+
+}
+.column
+{
+  width: 100%;
+  flow-children: down;
+}
+
