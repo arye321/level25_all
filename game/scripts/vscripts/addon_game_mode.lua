@@ -12,7 +12,7 @@ local globalMonkey = nil;
 local monkeyCount = 0;
 
 
-require('timers')
+
 LinkLuaModifier("modifier_core_courier", LUA_MODIFIER_MOTION_NONE)
 
 if CAddonTemplateGameMode == nil then
@@ -110,16 +110,7 @@ function CAddonTemplateGameMode:OnGameRulesStateChange()
 
 	end
 	if nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-	local all_heroes = HeroList:GetAllHeroes()
-	Timers:CreateTimer(function()
-      for _, hero in pairs(all_heroes) do
-			if hero:IsRealHero() then
-				--print("HERO: ", hero, " NAME: ", hero:GetName(), " GOLD: ", baseGoldPerTick)
-				hero:ModifyGold(10, false, 0)
-			end
-		end      return 1.0
-    end
-  )
+
 
 	end
 end
@@ -307,7 +298,7 @@ function CAddonTemplateGameMode:OnPickedHero( event )
 
 		local team = hero:GetTeam()
 
-		print("Hero is spawned!!!", hero:GetUnitName())
+		-- print("Hero is spawned!!!", hero:GetUnitName())
 		--print ("IsClone  ", hero:IsClone())
 		--hero:SetGold(6000, false)
 		
@@ -327,24 +318,14 @@ function CAddonTemplateGameMode:OnPickedHero( event )
 		--hero:AddItemByName("item_tpscroll")
     	local level = hero:GetLevel()
 
-    	if hero:GetUnitName() == "npc_dota_hero_monkey_king"  then
+    	
 			
-			monkeyCount = monkeyCount+1
-			for i=1,MAX_LEVEL do
-				hero:HeroLevelUp(false)
-			--[[
-			Returns:void
-		Levels up the hero, true or false to play effects.
-		]]
-		    end
-		else	
-			
-			while level < MAX_LEVEL do
-		        hero:AddExperience (2000,false,false)
-		        level = hero:GetLevel()
-		    end
-
+		while level < MAX_LEVEL do
+			hero:AddExperience (2000,false,false)
+			level = hero:GetLevel()
 		end
+
+	
 
 
 		local ability = nil
@@ -386,33 +367,14 @@ function CAddonTemplateGameMode:OnPickedHero( event )
 		if hero:GetUnitName() ~= "npc_dota_hero_tiny" then
 		if hero:GetUnitName() ~= "npc_dota_hero_invoker" then 
 		if hero:GetUnitName() ~= "npc_dota_hero_meepo" then 
-								
+					
     		for i=0,15 do
         		local ability = hero:GetAbilityByIndex(i)
         		if ability then
         			if not string.find(ability:GetAbilityName(), "special") then
-					  	if hero:GetUnitName() == "npc_dota_hero_monkey_king" then 
-	    				        		--print (ability:GetAbilityName())
-
-	    				end
+					  	
             			ability:SetLevel(ability:GetMaxLevel())
-            			if string.find(ability:GetAbilityName(), "monkey_king_wukongs_command") then
-            					--hero:CastAbilityImmediately(ability, hero:GetPlayerOwnerID()) 
-            					--print("casting ",ability:GetAbilityName())
-            					print("monkeyCount=",monkeyCount)
-
-            					if (monkeyCount == 1) then
-
-            						local pos = globalMonkey:GetAbsOrigin()
-            						print ("pos = ",pos)
-									--globalMonkey:CastAbilityOnPosition(pos,ability,0)
-
-            						hero:CastAbilityImmediately(ability,0)  
-            						ability:EndCooldown() 
-            					end
-
-
-            			end
+            			
 					end
         		end
     		end
@@ -422,6 +384,7 @@ function CAddonTemplateGameMode:OnPickedHero( event )
     	end
     	end
     	end
+		
 			  
 --[[			local courier_spawn = {}
 			courier_spawn[2] = Entities:FindByClassname(nil, "info_courier_spawn_radiant")
